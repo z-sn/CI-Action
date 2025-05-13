@@ -50,7 +50,7 @@ runs:
         ref: ${{ steps.pr-info.outputs.branchName }}
 
     - name: Check Formatting
-      uses: FreeRTOS/CI-CD-Github-Actions/formatting@main
+      uses: z-sn/CI-Action/formatting@main
       continue-on-error: true
       id: check-formatting
       with:
