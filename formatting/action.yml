@@ -128,7 +128,7 @@ runs:
         # Get all .c and .h files, as well as any other requested file types.
         # Then run uncrustify with the common config file.
 
-        echo -e "${{ env.bashInfo }} fdfind -e c -e h ${args} --exec ~/uncrustify/uncrustify --no-backup --replace --if-changed -c https://github.com/FreeRTOS/CI-CD-Github-Actions/blob/main/formatting/uncrustify.cfg -l C ${{ env.bashEnd }}"
+        echo -e "${{ env.bashInfo }} fdfind -e c -e h ${args} --exec ~/uncrustify/uncrustify --no-backup --replace --if-changed -c https://github.com/z-sn/CI-Action/blob/main/formatting/uncrustify.cfg -l C ${{ env.bashEnd }}"
         fdfind -e c -e h ${args} --exec ~/uncrustify/uncrustify --no-backup --replace --if-changed -c $GITHUB_ACTION_PATH/uncrustify.cfg -l C
 
         # Replace all trailing whitespace, exclude photo and binary files
